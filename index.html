@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Poppins;
+background:linear-gradient(180deg,#ffe6ef,#fff5f9,#ffffff);
+
+overflow-x:hidden;
+
+}
+
+/* Floating Hearts */
+
+.heart{
+
+position:fixed;
+bottom:-30px;
+font-size:18px;
+animation:float 10s linear infinite;
+opacity:.5;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0) rotate(0deg);
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+}
+
+}
+
+/* Envelope */
+
+#intro{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+}
+
+.envelope{
+
+width:250px;
+height:170px;
+background:#ffc8dd;
+border-radius:10px;
+cursor:pointer;
+position:relative;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+transition:.6s;
+
+}
+
+.envelope:hover{
+
+transform:scale(1.05);
+
+}
+
+.flap{
+
+position:absolute;
+width:100%;
+height:100%;
+background:#ffafcc;
+clip-path:polygon(0 0,50% 55%,100% 0);
+
+transition:.8s;
+
+}
+
+.open .flap{
+
+transform:rotateX(180deg);
+transform-origin:top;
+
+}
+
+.letter{
+
+position:absolute;
+left:10px;
+top:20px;
+
+width:230px;
+height:130px;
+
+background:white;
+
+border-radius:8px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:18px;
+
+transition:.8s;
+
+}
+
+.open .letter{
+
+transform:translateY(-120px);
+
+}
+
+.click{
+
+margin-top:40px;
+
+font-size:20px;
+
+color:#ff4d88;
+
+}
+
+/* Main */
+
+#main{
+
+display:none;
+
+}
+
+section{
+
+min-height:100vh;
+
+padding:90px 10%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+h1{
+
+font-size:65px;
+
+font-family:"Dancing Script";
+
+color:#ff4d88;
+
+}
+
+h2{
+
+font-size:45px;
+
+font-family:"Dancing Script";
+
+color:#ff6b9f;
+
+margin-bottom:30px;
+
+}
+
+p{
+
+max-width:750px;
+
+line-height:2;
+
+font-size:19px;
+
+color:#555;
+
+}
+
+/* button */
+
+button{
+
+margin-top:30px;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:#ff5d8f;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+button:hover{
+
+background:#ff2f74;
+
+transform:translateY(-4px);
+
+}
+
+/* glass */
+
+.card{
+
+margin-top:40px;
+
+padding:40px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.4);
+
+backdrop-filter:blur(20px);
+
+box-shadow:0 15px 35px rgba(255,105,180,.15);
+
+}
+
+/* reasons */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+width:100%;
+
+}
+
+.reason{
+
+padding:25px;
+
+background:white;
+
+border-radius:20px;
+
+transition:.5s;
+
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(255,105,180,.1);
+
+}
+
+.reason:hover{
+
+transform:translateY(-10px);
+
+background:#ffe9f2;
+
+}
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+}
+
+.sparkle{
+
+position:fixed;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+pointer-events:none;
+animation:sparkle 5s linear infinite;
+opacity:.7;
+
+}
+
+@keyframes sparkle{
+
+0%{
+
+transform:translateY(100vh) scale(0);
+
+}
+
+100%{
+
+transform:translateY(-20vh) scale(1.5);
+
+}
+
+}
+
+#final-letter{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:100px 20px;
+
+background:linear-gradient(180deg,#fff7fb,#ffe8f2);
+
+}
+
+.letter-paper{
+
+max-width:850px;
+
+background:#fffdfb;
+
+padding:60px;
+
+border-radius:25px;
+
+box-shadow:0 20px 45px rgba(255,105,180,.18);
+
+border:2px dashed #ffc4d6;
+
+position:relative;
+
+animation:fadeUp 1.5s ease;
+
+}
+
+.letter-paper::before{
+
+content:"💌";
+
+position:absolute;
+
+top:-25px;
+
+right:25px;
+
+font-size:45px;
+
+}
+
+.letter-paper h2{
+
+text-align:center;
+
+font-family:'Dancing Script',cursive;
+
+font-size:52px;
+
+color:#ff5f99;
+
+margin-bottom:35px;
+
+}
+
+.letter-paper p{
+
+font-size:19px;
+
+line-height:2.2;
+
+color:#555;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.signature{
+
+font-family:'Dancing Script',cursive;
+
+font-size:40px;
+
+color:#ff4f8a;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.bow{
+
+position:fixed;
+
+font-size:45px;
+
+z-index:999;
+
+animation:floatBow 4s ease-in-out infinite;
+
+}
+
+.tl{top:20px;left:20px;}
+
+.tr{top:20px;right:20px;}
+
+.bl{bottom:20px;left:20px;}
+
+.br{bottom:20px;right:20px;}
+
+@keyframes floatBow{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+.heartbeat{
+
+font-size:60px;
+
+text-align:center;
+
+margin-top:30px;
+
+animation:beat 1.2s infinite;
+
+}
+
+@keyframes beat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+#teddy{
+
+position:fixed;
+
+bottom:-15px;
+
+right:15px;
+
+font-size:80px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+#teddy:hover{
+
+transform:scale(1.15);
+
+}
+
+#sky{
+
+font-size:60px;
+
+cursor:pointer;
+
+line-height:2;
+
+}
+
+#cake{
+
+font-size:140px;
+
+cursor:pointer;
+
+transition:.5s;
+
+}
+
+#cake:hover{
+
+transform:scale(1.1);
+
+}
+
+.gallery{
+
+display:flex;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.photo{
+
+background:white;
+
+padding:15px;
+
+border-radius:20px;
+
+transform:rotate(-4deg);
+
+transition:.5s;
+
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+
+}
+
+.photo:nth-child(2){
+
+transform:rotate(3deg);
+
+}
+
+.photo:hover{
+
+transform:scale(1.05) rotate(0);
+
+}
+
+.photo img{
+
+width:250px;
+
+border-radius:15px;
+
+}
+
+.music{
+
+position:fixed;
+
+right:30px;
+
+top:30px;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+background:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<body>
+  <div id="sparkles"></div>
+<div class="bow tl">🎀</div>
+<div class="bow tr">🎀</div>
+<div class="bow bl">🎀</div>
+<div class="bow br">🎀</div>
+<div id="teddy">
+
+🧸
+
+</div>
+
+
+
+<section>
+
+<h2>Tonight's Sky ⭐</h2>
+
+<div id="sky">
+
+⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Make A Wish 🎂</h2>
+
+<div id="cake">
+
+🎂
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Our Little Memories 📷</h2>
+
+<div class="gallery">
+
+<div class="photo">
+
+<img src="images/1.jpg">
+
+<p>One of my favorite smiles ❤️</p>
+
+</div>
+
+<div class="photo">
+
+<img src="images/2.jpg">
+
+<p>The happiest day.</p>
+
+</div>
+
+<div class="photo">
+
+<img src="images/3.jpg">
+
+<p>You + Me = Home</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Pick A Heart ❤️</h2>
+
+<button onclick="note()">
+
+💗 Pick One
+
+</button>
+
+<p id="loveNote"></p>
+
+</section>
+
+<audio id="song" loop>
+<source src="music/cant-help-falling-in-love.mp3">
+</audio>
+
+<div class="music" onclick="playSong()">
+🎵
+</div>
+
+<!-- INTRO -->
+
+<div id="intro">
+
+<div class="envelope" onclick="openLetter()" id="envelope">
+
+<div class="flap"></div>
+
+<div class="letter">
+
+💌
+
+</div>
+
+</div>
+
+<div class="click">
+
+Click to Open
+
+</div>
+
+</div>
+
+<!-- WEBSITE -->
+
+<div id="main">
+
+<section>
+
+<h1 id="typing"></h1>
+
+<div class="card">
+
+<p>
+
+Happy Birthday to the sweetest, kindest and most handsome person I know.
+
+Today isn't just another day...
+
+It's the day my favorite person came into this world.
+
+Thank you for loving me, protecting me, making me laugh, and giving me countless memories.
+
+I hope this birthday brings you every happiness because you deserve the entire universe.
+
+❤️
+
+</p>
+
+</div>
+
+<button onclick="document.getElementById('story').scrollIntoView()">
+
+Let's Take a Walk Through My Heart →
+
+</button>
+
+</section>
+
+<section id="story">
+
+<h2>Our Little Story 🌸</h2>
+
+<div class="card">
+
+<p>
+
+One day...
+
+two strangers crossed paths.
+
+Little by little,
+
+you became my favorite notification,
+
+my safest place,
+
+my biggest smile,
+
+and finally...
+
+my home.
+
+Every memory with you is my favorite chapter,
+
+and today I get to celebrate the person who made my world brighter.
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Reasons I Love You ❤️</h2>
+
+<div class="grid">
+
+<div class="reason">Because your smile melts my heart.</div>
+
+<div class="reason">Because you're incredibly kind.</div>
+
+<div class="reason">Because you make me feel safe.</div>
+
+<div class="reason">Because your hugs are home.</div>
+
+<div class="reason">Because you always make me laugh.</div>
+
+<div class="reason">Because you never stop believing in me.</div>
+
+<div class="reason">Because you are YOU.</div>
+
+<div class="reason">Because I still get butterflies.</div>
+
+</div>
+
+</section>
+
+<section id="final-letter">
+
+    <div class="letter-paper">
+
+        <h2>To My Favorite Person ❤️</h2>
+
+        <p>
+
+            Dear Love,
+
+            <br><br>
+
+            Happy Birthday to the most wonderful person I've ever known.
+
+            Today isn't just another day—it's the day someone incredibly special came into this world. And somehow, life decided to let our paths cross. I will always be grateful for that.
+
+            <br><br>
+
+            Thank you for every smile you've given me, every laugh we've shared, every late-night conversation, every comforting hug, and every little moment that made me fall in love with you even more.
+
+            <br><br>
+
+            Being with you has taught me that love isn't about grand gestures every day. It's in the smallest things—your voice, your patience, the way you care, the way you make me feel safe, and the way you always make ordinary days feel extraordinary.
+
+            <br><br>
+
+            I hope this new year of your life is filled with happiness, success, good health, unforgettable adventures, and endless reasons to smile. I hope every dream you have slowly becomes reality, because no one deserves it more than you.
+
+            <br><br>
+
+            No matter where life takes us, I promise to keep cheering for you, believing in you, and loving you with all my heart.
+
+            <br><br>
+
+            If I could give you one thing today, it would be the ability to see yourself through my eyes—because then you'd know just how amazing, kind, handsome, and precious you truly are.
+
+            <br><br>
+
+            Thank you for choosing me.
+            Thank you for loving me.
+            Thank you for simply being you.
+
+            <br><br>
+
+            Happy Birthday, my love.
+
+            <br><br>
+
+            I love you more than words could ever explain.
+
+            <br><br><br>
+
+            Forever and Always,
+
+            <br>
+
+            <span class="signature">❤️ Nemika</span>
+
+        </p>
+
+    </div>
+
+</section>
+
+<section>
+
+<h2>My Wish For You 🎂</h2>
+
+<div class="card">
+
+<p>
+
+I hope this year gives you everything you've been wishing for.
+
+Success.
+
+Peace.
+
+Health.
+
+Adventures.
+
+Beautiful memories.
+
+And hopefully...
+
+many more birthdays spent together.
+
+I promise to keep loving you through every season of life.
+
+Happy Birthday, my love.
+
+🤍
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h1>
+
+I love you more than yesterday,
+
+but less than tomorrow.
+
+❤️
+
+</h1>
+
+<br><br>
+
+<p>
+
+Forever Yours,
+
+<br>
+
+<b>Nemika</b>
+
+</p>
+
+</footer>
+
+</div>
+
+<div class="heartbeat">❤️</div>
+
+<script>
+
+const text="Happy Birthday, My Love ❤️";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,100);
+
+}
+
+}
+document.getElementById("cake").onclick=function(){
+
+confetti({
+
+particleCount:250,
+
+spread:180,
+
+origin:{y:.6}
+
+});
+
+}
+
+document.getElementById("teddy").onclick=function(){
+
+alert("Hehe 🤍\n\nI love you more than words can explain.");
+
+}
+
+function openLetter(){
+
+document.getElementById("envelope").classList.add("open");
+
+setTimeout(()=>{
+
+document.getElementById("intro").style.display="none";
+
+document.getElementById("main").style.display="block";
+
+type();
+
+createHearts();
+
+},1000);
+
+}
+
+const notes=[
+
+"You are my favorite person.",
+
+"I still blush because of you.",
+
+"I'd choose you forever.",
+
+"You make ordinary days magical.",
+
+"You'll always have my heart.",
+
+"My happiest place is with you.",
+
+"I still get butterflies.",
+
+"You're my safe place.",
+
+"I'm proud of you every day.",
+
+"Thank you for existing."
+
+];
+
+function note(){
+
+document.getElementById("loveNote").innerHTML=
+
+notes[Math.floor(Math.random()*notes.length)];
+
+}
+
+function createHearts(){
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💗";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),10000);
+
+},300);
+
+}
+
+function playSong(){
+
+let song=document.getElementById("song");
+
+if(song.paused){
+
+song.play();
+
+}else{
+
+song.pause();
+
+}
+
+}
+setInterval(()=>{
+
+const s=document.createElement("div");
+
+s.className="sparkle";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(s);
+
+setTimeout(()=>s.remove(),6000);
+
+},200);
+
+document.body.addEventListener("dblclick",function(e){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💖";
+
+heart.style.position="fixed";
+
+heart.style.left=e.clientX+"px";
+
+heart.style.top=e.clientY+"px";
+
+heart.style.fontSize="45px";
+
+heart.style.transition="1s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.style.transform="scale(2)";
+
+heart.style.opacity=0;
+
+},100);
+
+setTimeout(()=>heart.remove(),1000);
+
+});
+
+</script>
+
+</body>
+</html>
